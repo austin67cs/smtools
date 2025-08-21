@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smtools"               # package name (what goes on PyPI)
+version = "0.1.0"
+description = "A small CLI tool that provides simple file utilities."
+authors = [{ name="Nwaneri Augustine Ebubechi", email="ebubechiaugustine6@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+smtl = "smtools_cli.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
